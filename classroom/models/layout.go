@@ -1,4 +1,4 @@
-package layout
+package models
 
 type Layout struct {
 	Tables []Table

@@ -7,7 +7,7 @@ import (
 	"github.com/winecraft-dev/ed-tech/sections/models"
 )
 
-func (c *Connection) GetSection(ctx context.Context, id int) (*models.PopulatedSection, error) {
+func (c *Connection) GetPopulatedSection(ctx context.Context, id int) (*models.PopulatedSection, error) {
 	query := `
 			SELECT
 				id, school_code, section, homeroom, homeroom_teacher,

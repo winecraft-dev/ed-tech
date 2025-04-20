@@ -56,7 +56,7 @@ func (s *Service) GetSection(c echo.Context) error {
 		return service.ErrMalformedInput.WithInternal(err)
 	}
 
-	section, err := s.Repository.GetSection(ctx, sectionID)
+	section, err := s.Repository.GetPopulatedSection(ctx, sectionID)
 	if err != nil {
 		return service.ErrDatabaseError.WithInternal(err)
 	}
